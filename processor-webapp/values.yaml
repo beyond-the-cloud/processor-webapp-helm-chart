@@ -16,12 +16,12 @@ imagePullSecrets: docker-hub
 port: 8080
 
 readinessProbe:
-  path: /actuator/health
+  path: /story
   initialDelaySeconds: 45
   periodSeconds: 5
 
 livenessProbe:
-  path: /v1/helloworld
+  path: /hello
   initialDelaySeconds: 60
   periodSeconds: 5
 
