@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-db-config
+data:
+  DBHostName: {{ .Values.mysql.dbHost | quote }}
+  DBSchema: {{ .Values.mysql.dbSchema | quote }}
+  KafkaServer: {{ .Values.kafkaServer | quote }}
+  ESAddr: {{ .Values.esAddr | quote }}
