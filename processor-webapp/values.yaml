@@ -15,19 +15,15 @@ image:
 imagePullSecrets: docker-hub
 port: 8080
 
-# readinessProbe:
-#   path: /actuator/health
-#   initialDelaySeconds: 45
-#   periodSeconds: 5
+readinessProbe:
+  path: /actuator/health
+  initialDelaySeconds: 45
+  periodSeconds: 5
 
-# livenessProbe:
-#   path: /v1/helloworld
-#   initialDelaySeconds: 60
-#   periodSeconds: 5
-
-# resources:
-#   memory: 256Mi
-#   cpu: 2000m
+livenessProbe:
+  path: /v1/helloworld
+  initialDelaySeconds: 60
+  periodSeconds: 5
 
 deployment:
   replicas: 3
