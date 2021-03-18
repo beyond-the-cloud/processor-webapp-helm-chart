@@ -4,8 +4,8 @@ mysql:
   dbUsername: root
   dbPassword: MysqlPwd123
 
-KafkaServer: kafka.default.svc.cluster.local:9092
-ESAddr: http://elasticsearch-master:9200
+kafkaServer: kafka.default.svc.cluster.local:9092
+esAddr: http://elasticsearch-master:9200
 
 image:
   repository: bh7cw/processor-webapp
