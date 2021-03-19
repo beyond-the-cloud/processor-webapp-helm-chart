@@ -16,3 +16,4 @@ Uninstall the helm:
 `helm uninstall {{ .Release.Name }}`
 
 Check NOTES.txt for more details.
+
