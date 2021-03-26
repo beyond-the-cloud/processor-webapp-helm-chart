@@ -10,6 +10,8 @@ spec:
   ports:
   - port: {{ .Values.deployment.svc.port }}
     targetPort: {{ .Values.port }}
+  - port: {{ .Values.deployment.svc.metricsPort }}
+    targetPort: {{ .Values.metricsPort }}
 ---
 apiVersion: apps/v1
 kind: Deployment

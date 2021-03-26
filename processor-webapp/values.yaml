@@ -40,3 +40,4 @@ deployment:
     prometheus.io/port: "2112"
   svc:
     port: 80
+    metricsPort: 2112
