@@ -32,5 +32,10 @@ deployment:
     maxSurge: 1
     maxUnavailable: 0
   type: RollingUpdate
+  # Monitoring: Adjust Prometheus configuration
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/metrics"
+    prometheus.io/port: "2112"
   svc:
     port: 80
