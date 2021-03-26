@@ -48,7 +48,6 @@ spec:
             name: {{ .Release.Name }}-db-secret
         ports:
         - containerPort: {{ .Values.port }}
-        - containerPort: {{ .Values.metricsPort }}
         readinessProbe:
           httpGet:
             path: {{ .Values.readinessProbe.path }}
