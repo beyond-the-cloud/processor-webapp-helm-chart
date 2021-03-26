@@ -13,7 +13,6 @@ image:
 
 imagePullSecrets: docker-hub
 port: 8080
-metricsPort: 2112
 
 readinessProbe:
   path: /story
@@ -40,4 +39,3 @@ deployment:
     prometheus.io/port: "2112"
   svc:
     port: 80
-    metricsPort: 2112
