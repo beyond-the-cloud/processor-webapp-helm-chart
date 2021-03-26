@@ -13,6 +13,7 @@ image:
 
 imagePullSecrets: docker-hub
 port: 8080
+metricsPort: 2112
 
 readinessProbe:
   path: /story
