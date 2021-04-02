@@ -24,8 +24,18 @@ livenessProbe:
   initialDelaySeconds: 60
   periodSeconds: 5
 
+resources:
+  memory: 256Mi
+  cpu: 500m
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 2
+  target:
+    averageUtilization: 5
+
 deployment:
-  replicas: 1
+  replicas: 2
   progressDeadlineSeconds: 600
   minReadySeconds: 30
   rollingUpdate:
